@@ -7,7 +7,7 @@ import time
 app = Flask(__name__)
 
 url = "https://jeemain.nta.nic.in/"
-keyword = "centre"
+keywords = ["centre", "answer key", "provincial", "answer"]  
 
 def telegram_msg(message):
     token = '7584740207:AAG47e0hC8ghyuR76vX5wKb78mWh6juG894'
@@ -25,7 +25,7 @@ def Checker():
         latest_li = li[0]
         text = latest_li.text.lower()
 
-        if keyword in text:
+        if any(k in text for k in keywords):
             print("Keyword Found")
             telegram_msg("Result is out!")
         else:
