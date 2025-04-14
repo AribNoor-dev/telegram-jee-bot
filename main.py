@@ -7,11 +7,11 @@ import time
 app = Flask(__name__)
 
 url = "https://jeemain.nta.nic.in/"
-keywords = ["result","score"]  
+keywords = ["result","score","answer"]  
 
 def telegram_msg(message):
     token = '7584740207:AAG47e0hC8ghyuR76vX5wKb78mWh6juG894'
-    chat_id = '1552339222'
+    chat_id = '-4744859301'
     url = f"https://api.telegram.org/bot{token}/sendMessage"
     data = {"chat_id": chat_id, "text": message}
     requests.post(url, data=data)
