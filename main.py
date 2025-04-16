@@ -11,7 +11,7 @@ keywords = ["result","score","card","answer","provisional","key"]
 
 def telegram_msg(message):
     token = '7584740207:AAG47e0hC8ghyuR76vX5wKb78mWh6juG894'
-    chat_id = '-4744859301'
+    chat_id = '-4772949323'
     url = f"https://api.telegram.org/bot{token}/sendMessage"
     data = {"chat_id": chat_id, "text": message}
     requests.post(url, data=data)
@@ -37,8 +37,8 @@ def Checker():
 def run_checker_loop():
     while True:
         Checker()
-        print("Refreshing every 5 minutes...")
-        time.sleep(300)
+        print("Refreshing every 2 minutes...")
+        time.sleep(100)
 
 # Start the checker loop in the background
 threading.Thread(target=run_checker_loop, daemon=True).start()
