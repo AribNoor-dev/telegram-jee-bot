@@ -7,7 +7,7 @@ import time
 app = Flask(__name__)
 
 url = "https://jeemain.nta.nic.in/"
-keywords = ["result","score","card"]  
+keywords = ["result","score","card","answer"]  
 
 def telegram_msg(message):
     token = '7584740207:AAG47e0hC8ghyuR76vX5wKb78mWh6juG894'
