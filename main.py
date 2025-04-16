@@ -7,7 +7,7 @@ import time
 app = Flask(__name__)
 
 url = "https://jeemain.nta.nic.in/"
-keywords = ["result","score","card","answer"]  
+keywords = ["result","score","card","answer","provincial","key"]  
 
 def telegram_msg(message):
     token = '7584740207:AAG47e0hC8ghyuR76vX5wKb78mWh6juG894'
@@ -38,7 +38,7 @@ def run_checker_loop():
     while True:
         Checker()
         print("Refreshing every 5 minutes...")
-        time.sleep(100)
+        time.sleep(120)
 
 # Start the checker loop in the background
 threading.Thread(target=run_checker_loop, daemon=True).start()
