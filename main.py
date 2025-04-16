@@ -38,7 +38,7 @@ def run_checker_loop():
     while True:
         Checker()
         print("Refreshing every 5 minutes...")
-        time.sleep(150)
+        time.sleep(100)
 
 # Start the checker loop in the background
 threading.Thread(target=run_checker_loop, daemon=True).start()
